@@ -150,6 +150,6 @@ def read_form():
 # Main Driver Function 
 if __name__ == '__main__': 
 	# Run the application on the local development server 
-	app.run(debug=True, port=8001)
+	app.run(debug=True)
 
 
