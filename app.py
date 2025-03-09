@@ -90,7 +90,9 @@ app = Flask(__name__, template_folder='')
 def index(): 
 	## Display the HTML form template
 	APP_ROOT = os.path.dirname(os.path.abspath(sys.argv[0]))
-	return APP_ROOT
+	realpath = os.path.dirname(os.path.realpath(__file))
+	data = {'a':APP_ROOT,'b':realpath}
+	return json.dumps(data)
 	#return render_template('index.html') 
 
 # `read-form` endpoint 
