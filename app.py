@@ -95,6 +95,8 @@ def index():
 @app.route('/read-form', methods=['POST']) 
 def read_form(): 
 	APP_ROOT = os.path.dirname(os.path.abspath(sys.argv[0]))
+	print(APP_ROOT)
+	sys.exit()
 	filenames = str(uuid.uuid4().hex)[:8]
 	target = os.path.join(APP_ROOT, 'tmp/'+filenames)
 	if not os.path.isdir(target):
